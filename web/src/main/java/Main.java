@@ -1,3 +1,7 @@
+import dao.TestDao;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  * User: shenzhang
  * Date: 6/3/14
@@ -5,7 +9,9 @@
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        TestDao dao = context.getBean("fish", TestDao.class);
+        System.out.println(dao.random());
     }
 }
 

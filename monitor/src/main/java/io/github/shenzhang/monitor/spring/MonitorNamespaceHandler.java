@@ -10,6 +10,6 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 public class MonitorNamespaceHandler extends NamespaceHandlerSupport {
     @Override
     public void init() {
-
+        registerBeanDefinitionParser("monitor", new MonitorBeanDefinitionParser());
     }
 }

@@ -11,6 +11,5 @@
 
 	<bean id="fish" class="dao.TestDaoImpl"/>
 
-	<fish:monitor pointcut="execution(* dao.TestDao.*(..))"/>
-
+	<fish:monitor pointcut="execution(* dao.Dao.*(..))"/>
 </beans>
